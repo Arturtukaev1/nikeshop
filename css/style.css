@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+html { scroll-behavior: smooth}
+.over { overflow: hidden }
+.page { overflow: hidden }
+.container {
+    max-width: 1250px;
+    margin: auto;
+    text-align: center;
+}
+
+/* START STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+.company { 
+    font: italic 1.25em 'Jura', sans-serif ;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 50px;
+    padding-right: 40px;
+}
+
+/* styling of elements of header__top (nav, menu, ...etc) */ 
+.header__top { 
+    background: #f6f6f6;
+    width: 100%;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 20px;
+}
+.nav__menu {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	background: #f6f6f6;
+	width: 100%;
+	text-align: center;
+	box-shadow: 0 10px 27px #00000080;
+	left: -100%;
+	top: 180px;
+    z-index: 1;
+    transition: 1s;
+}
+.nav__menu.active { left: 0 }
+.nav__menu-item { margin: 25px 0 } 
+.nav__menu-link { 
+    font: 500 1em 'Montserrat', sans-serif; 
+    color: #000 
+}
+.hamb { cursor: pointer }
+.hamb.active .bar:nth-child(2) { opacity: 0 }
+.hamb.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg) }
+.hamb.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg) }
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #000;
+}
+.search { font-size: 1.5em }
+.search * { 
+    cursor: pointer; 
+    margin-right: 10px;
+}
+
+/* styling of elements of header__content */ 
+.registration { text-align: center; padding: 30px }
+.registration__link { text-decoration: underline }
+.registration__text, .registration__link {
+    font: .9em 'Montserrat', sans-serif;
+    color: #000;  
+}
+.header__content-inner {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background: url('../img/headerBg2.png') center/cover ;
+    padding: 75px 45px;
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: none;
+}
+@keyframes example {
+    0%   {left: -100%;}
+    100% {left: 0;}
+}
+.title {
+    max-width: 400px;
+    font: bold 2.2em/1.5em 'Montserrat', sans-serif;
+    color: #fff;
+}
+.addintional-info {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+}
+.addintional-info * {
+    font-family: 500 1em 'Montserrat', sans-serif;
+    color: #fff;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+/* FİNİSH STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+
+/* START STYLİNG OF ELEMENTS OF MAIN. (MAIN)*/
+/* styling of elements of first-section */ 
+.first-section { padding-bottom: 150px }
+.discount {
+    max-width: 340px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0 70px 0;
+}
+.discount__title { font: bold 2.2em 'Montserrat', sans-serif }
+.discount__text { font: 500 1.1em 'Montserrat', sans-serif }
+.discount__btns {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.btn1 { background: #eee }
+.btn2 { background: #000; color: #fff; }
+.btn1, .btn2 {
+    transition: 1s;
+    font: 600 1.1em 'Montserrat', sans-serif;
+    padding: 15px ;
+    width: 165px;
+    border-radius: 50px;
+    border: none;
+}
+.slider-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+.slider__title { font: 600 1.6em 'Montserrat', sans-serif }
+.btn-left, .btn-right {
+    background: transparent;
+    border: 0;
+}
+.fa-arrow-left, .fa-arrow-right {
+    font-size: 3em;
+    color: #e7e7e7;
+    margin-left: 20px;
+}
+.slider { position: relative }
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    z-index: 2;
+    left: 0;
+    background: #fff;
+    transform: translate(-100%, 0);
+}
+.swiper-slide { position: relative }
+.swiper-slide > img {max-width: 100% }
+.swiper, .swiper2 { overflow: visible }
+.slick-track { display: flex }
+.content-slide { padding-top: 25px }
+.content-slide span { 
+    display: block;
+    padding: 5px 0;
+}
+.product-name { font: 500 1.25em 'Montserrat', sans-serif }
+.product-price, .product { font: 500 1.1em 'Montserrat', sans-serif }
+.product { color: #949494 }
+
+/* styling of elements of third-section */ 
+.third-section { padding: 100px 0 }
+.blok-moda__inner {
+    background: url('../img/bigBackground.png') center/cover fixed;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.block-moda__content {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+}
+.blok-moda__title {
+    font: 500 1.3em 'Montserrat', sans-serif;
+    padding-bottom: 25px;
+    color: #fff;
+}
+
+/* styling of elements of five-section */ 
+.five-section { padding: 100px 0 }
+
+/* styling of elements of six-section */ 
+.six-section {
+    background: url('../img/six-section-background-mobil.png') center/cover;
+    min-height: 450px;
+    width: 100%;
+}
+.nike-club {
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-top: 70px;
+}
+.nike-club__title { 
+    font: 900 2em 'Montserrat', sans-serif;
+    color: #fff;
+}
+.nike-club__subtitle { 
+    font: 500 1.5em 'Montserrat', sans-serif ;
+    color: #fff;
+}
+.btn3 {
+    font: 600 1.1em 'Montserrat', sans-serif;
+    margin-top: 80px;
+    width: 140px;
+    padding: 13px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    transition: .5s;
+}
+
+/* styling of elements of seven-section */ 
+.seven-section { padding: 100px 0 }
+.slideBtn {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+/* START STYLİNG OF ELEMENTS OF FOOTER. (FOOTER)*/
+.footer { background: #f6f6f6 }
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px;
+}
+.footer__title { 
+    font: bold 1.2em 'Montserrat', sans-serif;
+    padding-bottom: 40px;
+}
+.footer__item {
+    font: bold 1.2em 'Montserrat', sans-serif;
+    color: #858585;
+    display: block;
+    padding-bottom: 20px;
+}
+.footer-1, .footer-2, .footer-3 { 
+    text-align: center;
+    padding-bottom: 50px;
+}
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbdbdb;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+.icon {
+    font-size: 2em;
+    display: block;
+    margin: auto;
+    color: #acacac;
+}
+.footer-line {
+    height: 5px;
+    background: #c4c4c4;
+    width: 100%;
+}
+.footer__bottom {
+    padding: 20px;
+    text-align: center;
+}
+.verification {
+    color: #858585;
+    font: 500 .9em 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+    display: block;
+}
+.additional-info__link {
+    color: #858585;
+    font: 600 1.1em 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    .container { text-align: inherit }
+
+    /* START STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+    /* styling of elements of header__top (nav, menu, ...etc) */ 
+    .nav {  padding: 0 70px 0 20px }
+	.nav__menu {
+        position: inherit;
+        flex-direction: row;
+        background: inherit;
+        width: inherit;
+        transition: initial;
+        box-shadow: inherit;
+    }
+    .nav__menu-item { transition: .6s }
+    .nav__menu-item:not(:last-child) { margin-right: 30px }
+    .nav__menu-item:hover::after { width: 100% } 
+    .nav__menu-item::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #000;
+        transition: width .5s;
+    }
+	.hamb { display: none }
+    .search *, .bar { transition: .3s }
+    .search *:hover { font-size: 1.5em }
+    
+    /* styling of elements of header__content */ 
+    .header__content-inner { 
+        max-width: 1250px;
+        margin: 0 auto;
+        background: url('../img/headerBg.png') center/cover fixed; 
+    }
+    .addintional-info * { margin-right: 30px }
+    .more:hover::after,
+    .collection:hover::after { width: 80% }
+    .more::after, .collection::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #fff;
+        transition: width .5s;
+    }
+    /* FİNİSH STYLİNG OF ELEMENTS OF HEADER. (HEADER)*/
+
+    /* START STYLİNG OF ELEMENTS OF MAIN. (MAIN)*/
+    /* styling of elements of first-section */ 
+    .fa-arrow-left:hover, .fa-arrow-right:hover {
+        color: black;
+        cursor: pointer;
+    }
+    .swiper-slide { transition: .8s }
+    .swiper-slide:hover { filter: drop-shadow(1rem 1rem 2rem #585858) }
+    .btn1:hover {
+        background: #dbdada;
+        filter: drop-shadow(0 0 0.75rem #888585);
+        cursor: pointer;
+    }
+    .btn2:hover {
+        background: #3d3c3c;
+        filter: drop-shadow(0 0 0.75rem #2b2a2a);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* styling of elements of six-section */ 
+    .btn3:hover {
+        background: #dbdada;
+        filter: drop-shadow(0 0 0.75rem #888585);
+        cursor: pointer;
+    }
+
+    /* styling of elements of six-section */
+    .six-section { background: url('../img/six-section-background.png') center/cover }
+    .nike-club__title { font-size: 2.8em }
+
+    /* START STYLİNG OF ELEMENTS OF FOOTER. (FOOTER)*/
+    .footer__content {
+        display: flex ; 
+        justify-content: space-between;
+        flex-direction: inherit;
+    }
+    .footer__top { display: flex }
+    .footer-1, .footer-2, .footer-3 { text-align: inherit }
+    .footer-1 { margin-right: 100px }
+    .footer-3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__item { transition: .6s }
+    .footer__item:hover { cursor: pointer }
+    .footer__item:hover::after { width: 100% } 
+    .footer__item::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 5px;
+        background: #858585;
+        transition: width .5s;
+    }
+    .icon-circle:hover {
+        background: #2b2a2a;
+        cursor: pointer;
+    }
+    .footer__bottom {
+        text-align: inherit;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    
+    .additional-info__menu {
+        display: flex;
+        justify-content: space-between;
+    } 
+    
+}
+
+
+
+
+  
+
